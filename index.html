@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="tr" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoş Geldiniz</title>
+    <!-- Tailwind CSS for clean, modern, responsive utility styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter for crisp, modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 flex flex-col justify-between selection:bg-indigo-500 selection:text-white transition-colors duration-200">
+
+    <!-- Main Container -->
+    <main class="w-full max-w-4xl mx-auto px-6 py-16 sm:py-24 flex-grow flex flex-col justify-center">
+        
+        <!-- Welcoming Header Section -->
+        <header class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+            <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">
+                Hoş Geldiniz
+            </h1>
+            <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                Projelerimize göz atın
+            </p>
+        </header>
+
+        <!-- Responsive Grid of Project Cards -->
+        <section aria-label="Proje Bağlantıları" class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+            
+            <!-- Project 1 (Active & Clickable) -->
+            <a href="https://example.com/proje-1" target="_blank" rel="noopener noreferrer" 
+               class="group relative flex flex-col justify-between p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-indigo-500/50 dark:hover:border-indigo-500/50 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-slate-950">
+                <div class="flex items-start justify-between gap-4 mb-3">
+                    <div class="flex items-center gap-3">
+                        <!-- Project Icon Badge -->
+                        <div class="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-950/70 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-200">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h2 class="text-lg font-semibold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                            Harita
+                        </h2>
+                    </div>
+                    <!-- External Link Icon -->
+                    <span class="text-slate-400 dark:text-slate-500 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200 shrink-0" aria-hidden="true">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                    </span>
+                </div>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Damarlarda yolculuk
+                </p>
+            </a>
+
+            <!-- Project 2 (Faint & Uninteractable Placeholder) -->
+            <div aria-disabled="true" tabindex="-1"
+                 class="relative flex flex-col justify-between p-6 rounded-2xl bg-white/50 dark:bg-slate-900/40 border border-slate-200/50 dark:border-slate-800/50 opacity-45 grayscale select-none pointer-events-none">
+                <div class="flex items-start justify-between gap-4 mb-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800/70 text-slate-400 dark:text-slate-500 flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                            </svg>
+                        </div>
+                        <h2 class="text-lg font-semibold text-slate-500 dark:text-slate-400">
+                            ????
+                        </h2>
+                    </div>
+                </div>
+                <p class="text-sm text-slate-400 dark:text-slate-500 leading-relaxed">
+                    Belki bir gün
+                </p>
+            </div>
+
+            <!-- Project 3 (Faint & Uninteractable Placeholder) -->
+            <div aria-disabled="true" tabindex="-1"
+                 class="relative flex flex-col justify-between p-6 rounded-2xl bg-white/50 dark:bg-slate-900/40 border border-slate-200/50 dark:border-slate-800/50 opacity-45 grayscale select-none pointer-events-none">
+                <div class="flex items-start justify-between gap-4 mb-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800/70 text-slate-400 dark:text-slate-500 flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                            </svg>
+                        </div>
+                        <h2 class="text-lg font-semibold text-slate-500 dark:text-slate-400">
+                            ????
+                        </h2>
+                    </div>
+                </div>
+                <p class="text-sm text-slate-400 dark:text-slate-500 leading-relaxed">
+                    Belki bir gün
+                </p>
+            </div>
+
+            <!-- Project 4 (Faint & Uninteractable Placeholder) -->
+            <div aria-disabled="true" tabindex="-1"
+                 class="relative flex flex-col justify-between p-6 rounded-2xl bg-white/50 dark:bg-slate-900/40 border border-slate-200/50 dark:border-slate-800/50 opacity-45 grayscale select-none pointer-events-none">
+                <div class="flex items-start justify-between gap-4 mb-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800/70 text-slate-400 dark:text-slate-500 flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                            </svg>
+                        </div>
+                        <h2 class="text-lg font-semibold text-slate-500 dark:text-slate-400">
+                            ????
+                        </h2>
+                    </div>
+                </div>
+                <p class="text-sm text-slate-400 dark:text-slate-500 leading-relaxed">
+                    Belki bir gün
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Minimal Footer -->
+    <footer class="w-full max-w-4xl mx-auto px-6 py-8 text-center text-sm text-slate-500 dark:text-slate-500 border-t border-slate-200/60 dark:border-slate-800/60">
+        <p>Aktif projeyi yeni sekmede açmak için üzerine tıklayın.</p>
+    </footer>
+
+</body>
+</html>
